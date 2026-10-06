@@ -110,7 +110,7 @@ export const projects: Project[] = [
     summary:
       "A responsive website for Coach Zinny’s therapy and wellness services, where visitors can learn about her work, book sessions, and explore her books.",
     role: "Website design, UI/UX, content structure, responsive design, booking experience, and deployment",
-    tools: ["Lovable Pro", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    tools: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
     overview:
       "I designed and built a responsive website for Coach Zinny’s therapy and wellness services. Visitors can learn about her services, book sessions, and explore or purchase her books in one place.",
     challenge:
