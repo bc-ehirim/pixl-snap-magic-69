@@ -3,12 +3,12 @@ import portraitAsset from "@/assets/benjamin-ehirim.png.asset.json";
 import cvAsset from "@/assets/benjamin-ehirim-cv.pdf.asset.json";
 
 export const profile = {
-  name: "Ehirim Benjamin",
-  initials: "EB",
+  name: "Benjamin Ehirim",
+  initials: "BE",
   headline: "Graphic Designer. AI Web Creator. IT Support.",
   tagline: "Graphic Designer • AI Web Creator • IT Support",
   intro:
-    "Creative professional with experience in graphic design, branding, digital printing, IT support, and AI-assisted website and app building. I use modern AI and no-code tools to create practical digital solutions for businesses and clients.",
+    "Creative professional with experience in graphic design, branding, digital printing, IT support, and AI-assisted website and app building. I use modern AI and no-code tools to create practical, user-friendly digital products and branded experiences.",
   status: "Available for opportunities",
   location: "Lagos, Nigeria",
   phone: "+234 810 727 1610",
