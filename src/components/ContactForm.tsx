@@ -72,7 +72,8 @@ export function ContactLinks() {
   const links = [
     { label: "Email", href: `mailto:${socials.email}`, value: socials.email },
     { label: "LinkedIn", href: socials.linkedin, value: "LinkedIn profile" },
-    { label: "GitHub", href: socials.github, value: "GitHub profile" },
+    { label: "X", href: socials.x, value: "@DecencyBenjamin" },
+    { label: "Website", href: socials.website, value: "benovertech.vercel.app" },
     ...(socials.whatsapp ? [{ label: "WhatsApp", href: socials.whatsapp, value: "Message on WhatsApp" }] : []),
   ];
   return (
