@@ -1,6 +1,4 @@
 // Edit this file to update your portfolio content.
-import portraitAsset from "@/assets/benjamin-ehirim.png.asset.json";
-import cvAsset from "@/assets/benjamin-ehirim-cv.pdf.asset.json";
 
 export const profile = {
   name: "Benjamin Ehirim",
@@ -18,8 +16,8 @@ export const profile = {
   status: "Open to work and new projects",
   location: "Lagos, Nigeria",
   phone: "+234 810 727 1610",
-  portrait: portraitAsset.url,
-  cvUrl: cvAsset.url,
+  portrait: "/benjamin-ehirim-portrait.png",
+  cvUrl: "/Resume%20for%20Ehirim%20Benjamin.pdf",
 };
 
 export const socials = {
@@ -55,7 +53,6 @@ export type Project = {
   solution: string;
   outcome?: string;
   gallery: string[];
-  liveUrl?: string;
 };
 
 const TBA = "I’m still writing up this part.";
@@ -66,6 +63,7 @@ export const projects: Project[] = [
     title: "Job Quotation Web App",
     category: "Digital Products",
     year: "Year not listed",
+    cover: "/projects/babc-quotation-app.jpg",
     summary:
       "I built a web app for BIG WIG Architecture and Building Construction Company to make job estimates, quotations and related documents easier to manage.",
     role: "Design and AI-assisted development",
@@ -82,6 +80,7 @@ export const projects: Project[] = [
     title: "BIG WIG Architect Official Website",
     category: "Web",
     year: "Year not listed",
+    cover: "/projects/babc-official-site.jpg",
     summary:
       "I designed and built the official website for BIG WIG Architecture and Building Construction, with details about the company, its services and its projects.",
     role: "Website design and AI-assisted development",
@@ -98,6 +97,7 @@ export const projects: Project[] = [
     title: "Coach Zinny Therapy Website",
     category: "Web",
     year: "Year not listed",
+    cover: "/projects/coach-zinny.jpg",
     summary:
       "A therapy and wellness website for Coach Zinny, with session booking, book sales and service details in one place.",
     role: "Website design and AI-assisted development",
@@ -189,52 +189,52 @@ export const experience: Experience[] = [
   {
     position: "Chief Operating and Maintenance Officer",
     organization: "Exceeding Stone Industry Limited",
-    type: "Oyo State",
-    start: "Date not listed",
+    type: "Off Road, Ayete 201101, Oyo State",
+    start: "Dates not listed",
     end: "Present",
-    description: "Looked after routine equipment checks, planned maintenance and handled basic troubleshooting.",
+    description: "Oversaw routine equipment checks, maintenance scheduling, and basic troubleshooting.",
     achievements: [
-      "Kept an eye on procedures and helped the team get work done on time.",
-      "Worked with staff to keep downtime low and daily operations moving.",
+      "Monitored workplace procedures and supported timely completion of assigned tasks.",
+      "Worked with staff to reduce downtime and maintain efficient operations.",
     ],
     tools: [],
   },
   {
     position: "Operating Officer",
     organization: "Aristocrat Industries Limited",
-    type: "Ota, Ogun State",
-    start: "Date not listed",
-    end: "Date not listed",
-    description: "Kept track of equipment use and flagged faults or maintenance needs.",
+    type: "Plot 7 & 8, Block 10, Ota Industrial Estate, off Idiroko Road, Ota, Ogun State",
+    start: "Dates not listed",
+    end: "Dates not listed",
+    description: "Monitored equipment use and reported faults or maintenance needs.",
     achievements: [
-      "Helped coordinate the day’s work and sort out delays.",
-      "Worked with the team to keep the workplace safe and organised.",
+      "Assisted with workflow coordination to improve efficiency and reduce delays.",
+      "Worked with team members to maintain safe and organised operations.",
     ],
     tools: [],
   },
   {
     position: "Graphic Designer / Managing Director",
     organization: "Decent Prints Graphics and Tech Ltd",
-    type: "Uli, Anambra State",
-    start: "Date not listed",
-    end: "Date not listed",
-    description: "Handled customer enquiries, pricing, project schedules and the day-to-day running of the business.",
+    type: "257, Devine Plaza, by Benbella Hospital, Uli, Anambra State",
+    start: "Dates not listed",
+    end: "Dates not listed",
+    description: "Managed customer communication, pricing, project scheduling, and business operations.",
     achievements: [
-      "Took design and print jobs from the first conversation through to delivery.",
-      "Created branding, promo materials, social media graphics and print designs for clients.",
-      "Coordinated printing and finishing, and checked that each job was up to standard.",
+      "Managed client design and print projects from initial brief to final delivery.",
+      "Created branding, promotional, social media, and print materials for clients.",
+      "Coordinated printing, production, and finishing to maintain quality standards.",
     ],
     tools: ["CorelDRAW", "Digital printing"],
   },
   {
     position: "Graphic Designer",
     organization: "Benovertech Group Ltd",
-    type: "Awka, Anambra State",
-    start: "Date not listed",
-    end: "Date not listed",
+    type: "Commissioner’s Quarters, Iffite, Awka, Anambra State",
+    start: "Dates not listed",
+    end: "Dates not listed",
     description: "Created branding, social media, promotional and print designs for clients.",
     achievements: [
-      "Took design jobs from the client brief through to the final work.",
+      "Managed design projects from client brief to final delivery.",
       "Prepared artwork for digital and large-format printing.",
     ],
     tools: ["CorelDRAW"],
@@ -243,12 +243,12 @@ export const experience: Experience[] = [
     position: "Graphic Designer / CorelDRAW Tutor",
     organization: "ICT Zone One",
     type: "Sango Ota, Ogun State",
-    start: "Date not listed",
-    end: "Date not listed",
-    description: "Taught students how to use CorelDRAW and put graphic design into practice.",
+    start: "Dates not listed",
+    end: "Dates not listed",
+    description: "Trained students in CorelDRAW and practical graphic design techniques.",
     achievements: [
-      "Created print and digital designs for client jobs.",
-      "Helped students learn branding, layouts, typography and how to prepare files for print.",
+      "Created print and digital designs for client projects.",
+      "Guided learners in branding, layout design, typography, and print preparation.",
     ],
     tools: ["CorelDRAW"],
   },
@@ -273,7 +273,7 @@ export const volunteering = [
 
 export const education = [
   {
-    course: "B.Sc. Computer Science",
+    course: "B.Sc. in Computer Science",
     school: "Chukwuemeka Odumegwu Ojukwu University, Anambra State",
     dates: "Dates not listed",
     notes: "",

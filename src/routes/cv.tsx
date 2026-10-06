@@ -23,7 +23,12 @@ export const Route = createFileRoute("/cv")({
         <a href={profile.cvUrl} download className="btn btn-outline">Download a copy</a>
       </div>
       <div className="mt-10 overflow-hidden rounded-xl border">
-        <iframe src={profile.cvUrl} title="CV preview" className="h-[75vh] w-full bg-card" loading="lazy" />
+        <iframe
+          src={profile.cvUrl}
+          title={`${profile.name} CV`}
+          className="h-[75vh] w-full bg-card"
+          loading="lazy"
+        />
       </div>
     </section>
   ),

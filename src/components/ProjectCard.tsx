@@ -19,7 +19,10 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className="group">
       <Link to="/work/$slug" params={{ slug: project.slug }} className="block">
         <div className="aspect-[4/3] overflow-hidden rounded-xl">
-          <ProjectCover project={project} className="transition-transform duration-700 ease-out group-hover:scale-[1.03]" />
+          <ProjectCover
+            project={project}
+            className="transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+          />
         </div>
         <div className="mt-5 flex items-baseline justify-between gap-4">
           <h3 className="font-display text-2xl md:text-3xl">{project.title}</h3>
@@ -32,7 +35,8 @@ export function ProjectCard({ project }: { project: Project }) {
           <dt className="text-muted-foreground">Tools</dt><dd>{project.tools.join(", ")}</dd>
         </dl>
         <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold">
-          See what I did <span className="transition-transform group-hover:translate-x-1">→</span>
+          View project details{" "}
+          <span className="transition-transform group-hover:translate-x-1">→</span>
         </span>
       </Link>
     </article>

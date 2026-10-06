@@ -47,7 +47,6 @@ function CaseStudy() {
         <p className="eyebrow mt-8 !text-accent">{p.category} · {p.year}</p>
         <h1 className="font-display mt-3 text-5xl md:text-8xl">{p.title}</h1>
         <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{p.summary}</p>
-        {p.liveUrl && <a href={p.liveUrl} target="_blank" rel="noreferrer" className="btn btn-primary mt-6">See the website ↗</a>}
       </header>
       <div className="container-x">
         <div className="aspect-[16/9] overflow-hidden rounded-2xl"><ProjectCover project={p} /></div>
