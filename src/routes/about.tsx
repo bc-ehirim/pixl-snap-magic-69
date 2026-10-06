@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { profile } from "@/data/portfolio";
 import { Portrait } from "@/components/Portrait";
 import { ExperienceSection, SkillsSection } from "@/components/Sections";
 
@@ -6,9 +7,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Benjamin Ehirim" },
-      { name: "description", content: "About Benjamin Ehirim: graphic design, branding, print, digital experiences and AI-assisted web development." },
+      { name: "description", content: "A little about Benjamin Ehirim, a graphic designer and website builder based in Lagos." },
       { property: "og:title", content: "About — Benjamin Ehirim" },
-      { property: "og:description", content: "About Benjamin Ehirim: graphic design, branding, print, digital experiences and AI-assisted web development." },
+      { property: "og:description", content: "A little about Benjamin Ehirim, a graphic designer and website builder based in Lagos." },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -19,11 +20,13 @@ export const Route = createFileRoute("/about")({
         <Portrait className="aspect-[4/5] w-full max-w-sm" />
         <div>
           <p className="eyebrow">About</p>
-          <h1 className="font-display mt-3 text-5xl md:text-7xl">Where creativity meets technology.</h1>
+          <h1 className="font-display mt-3 text-5xl md:text-7xl">A bit about me.</h1>
           <div className="mt-8 space-y-5 text-lg leading-relaxed">
-            <p>I'm Benjamin Ehirim, a multidisciplinary creative professional working across graphic design, branding, print, digital experiences, and AI-assisted web development.</p>
-            <p className="text-muted-foreground">My work sits at the intersection of creativity and technology. I enjoy taking an idea from concept to a polished visual or functional digital product, using both traditional creative tools and modern AI-assisted solutions.</p>
-            <p className="text-muted-foreground">I focus on practical solutions, thoughtful visual communication and continuous learning as technology changes how creative work is produced.</p>
+            {profile.about.map((paragraph, index) => (
+              <p key={paragraph} className={index > 0 ? "text-muted-foreground" : undefined}>
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </section>

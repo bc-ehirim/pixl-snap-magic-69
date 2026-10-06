@@ -8,7 +8,7 @@ export function Portrait({ className = "" }: { className?: string }) {
       ) : (
         <div className="placeholder-art flex h-full w-full flex-col items-center justify-center gap-2">
           <span className="font-display text-6xl">{profile.initials}</span>
-          <span className="eyebrow">Portrait coming soon</span>
+          <span className="eyebrow">Photo to come</span>
         </div>
       )}
     </div>

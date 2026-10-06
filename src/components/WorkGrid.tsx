@@ -28,7 +28,7 @@ export function WorkGrid() {
 
       <div className="mt-8 grid gap-x-6 gap-y-8 md:grid-cols-2">
         {list.map((p) => <ProjectCard key={p.slug} project={p} />)}
-        {list.length === 0 && <p className="text-muted-foreground">No projects in this category yet.</p>}
+        {list.length === 0 && <p className="text-muted-foreground">Nothing here just yet. Try another category.</p>}
       </div>
     </div>
   );

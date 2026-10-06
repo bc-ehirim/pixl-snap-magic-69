@@ -14,7 +14,7 @@ export function SectionHead({ eyebrow, title, sub }: { eyebrow: string; title: s
 export function SkillsSection() {
   return (
     <section id="skills" className="container-x scroll-mt-20 py-16 md:py-20">
-      <SectionHead eyebrow="Skills" title="What I bring" />
+      <SectionHead eyebrow="Skills" title="The things I can help with" />
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
         {skills.map((g) => (
           <Reveal key={g.group} className="skill-card rounded-[1.6rem] p-5 md:p-6">
@@ -27,7 +27,7 @@ export function SkillsSection() {
       </div>
 
       <div className="mt-16">
-        <p className="eyebrow">Tools I work with</p>
+        <p className="eyebrow">Tools I use</p>
         <ul className="mt-4 flex flex-wrap gap-2">
           {tools.map((t) => (
             <li key={t} className="rounded-full border border-black/5 bg-white/50 px-3.5 py-1.5 text-sm text-muted-foreground">
@@ -43,7 +43,7 @@ export function SkillsSection() {
 export function ExperienceSection() {
   return (
     <section id="experience" className="container-x scroll-mt-20 py-16 md:py-20">
-      <SectionHead eyebrow="Experience" title="Where I've worked" />
+      <SectionHead eyebrow="Experience" title="My work experience" />
 
       <ol className="space-y-5">
         {experience.map((e, i) => (

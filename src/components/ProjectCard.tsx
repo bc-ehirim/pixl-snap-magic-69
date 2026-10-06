@@ -8,7 +8,7 @@ export function ProjectCover({ project, className = "" }: { project: Project; cl
     <div className={`placeholder-art flex h-full w-full items-center justify-center ${className}`}>
       <div className="text-center">
         <p className="font-display text-3xl md:text-4xl">{project.title}</p>
-        <p className="eyebrow mt-3">Image coming soon</p>
+        <p className="eyebrow mt-3">Project image to come</p>
       </div>
     </div>
   );
@@ -32,7 +32,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <dt className="text-muted-foreground">Tools</dt><dd>{project.tools.join(", ")}</dd>
         </dl>
         <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold">
-          View Project <span className="transition-transform group-hover:translate-x-1">→</span>
+          See what I did <span className="transition-transform group-hover:translate-x-1">→</span>
         </span>
       </Link>
     </article>

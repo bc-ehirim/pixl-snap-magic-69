@@ -43,30 +43,30 @@ function CaseStudy() {
   return (
     <article>
       <header className="container-x pb-10 pt-10 md:pt-16">
-        <Link to="/work" className="link-underline text-sm text-muted-foreground">← Back to Work</Link>
+        <Link to="/work" className="link-underline text-sm text-muted-foreground">← Back to all work</Link>
         <p className="eyebrow mt-8 !text-accent">{p.category} · {p.year}</p>
         <h1 className="font-display mt-3 text-5xl md:text-8xl">{p.title}</h1>
         <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{p.summary}</p>
-        {p.liveUrl && <a href={p.liveUrl} target="_blank" rel="noreferrer" className="btn btn-primary mt-6">Visit live site ↗</a>}
+        {p.liveUrl && <a href={p.liveUrl} target="_blank" rel="noreferrer" className="btn btn-primary mt-6">See the website ↗</a>}
       </header>
       <div className="container-x">
         <div className="aspect-[16/9] overflow-hidden rounded-2xl"><ProjectCover project={p} /></div>
       </div>
       <div className="container-x py-12 md:py-20">
-        <Block title="Overview">{p.overview}</Block>
-        <Block title="Challenge">{p.challenge}</Block>
-        <Block title="My Role">{p.role}</Block>
-        <Block title="Approach">{p.approach}</Block>
-        <Block title="Tools">{p.tools.join(", ")}</Block>
-        <Block title="Solution">{p.solution}</Block>
-        <Block title="Gallery">
+        <Block title="About this project">{p.overview}</Block>
+        <Block title="The brief">{p.challenge}</Block>
+        <Block title="My part">{p.role}</Block>
+        <Block title="How I went about it">{p.approach}</Block>
+        <Block title="Tools I used">{p.tools.join(", ")}</Block>
+        <Block title="What I made">{p.solution}</Block>
+        <Block title="Project images">
           {p.gallery.length ? (
             <div className="grid gap-4">{p.gallery.map((g) => <img key={g} src={g} alt={`${p.title} screenshot`} loading="lazy" className="rounded-xl" />)}</div>
           ) : (
-            <span className="text-muted-foreground">Screenshots and mockups coming soon.</span>
+            <span className="text-muted-foreground">I haven’t added the project images yet.</span>
           )}
         </Block>
-        <Block title="Outcome">{p.outcome ?? <span className="text-muted-foreground">To be added.</span>}</Block>
+        <Block title="How it went">{p.outcome ?? <span className="text-muted-foreground">I haven’t added this part yet.</span>}</Block>
       </div>
       <nav aria-label="Project navigation" className="container-x grid grid-cols-2 gap-4 border-t py-10">
         <Link to="/work/$slug" params={{ slug: prev.slug }} className="group">

@@ -6,7 +6,7 @@ import { ProjectCover } from "@/components/ProjectCard";
 
 const title = "Benjamin Ehirim — Designer & Creative Technologist";
 const description =
-  "Portfolio of Benjamin Ehirim, a multidisciplinary creative professional working across graphic design, branding, digital experiences and AI-assisted development.";
+  "I’m Benjamin, a graphic designer and web creator in Lagos. Have a look at my design, print and web projects.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,21 +33,24 @@ function HomePage() {
             <span className="apple-pill">{profile.status}</span>
             <p className="eyebrow mt-8">{profile.location}</p>
             <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[0.98] md:text-7xl lg:text-[5.5rem]">
-              Creative work, made with purpose.
+              {profile.heroTitle}
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               {profile.intro}
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link to="/work" className="btn btn-primary">
-                Explore my work <ArrowRight size={16} aria-hidden="true" />
+                Have a look at my work <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link to="/about" className="btn btn-outline">
-                More about me
+                About me
               </Link>
             </div>
-            <a href="#selected-work" className="mt-10 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-              Scroll to explore <ArrowDown size={15} aria-hidden="true" />
+            <a
+              href="#selected-work"
+              className="mt-10 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+            >
+              See what I’ve been working on <ArrowDown size={15} aria-hidden="true" />
             </a>
           </div>
 
@@ -66,11 +69,16 @@ function HomePage() {
       <section id="selected-work" className="container-x scroll-mt-20 py-14 md:py-20">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-5 md:mb-10">
           <div>
-            <p className="eyebrow">A few highlights</p>
-            <h2 className="font-display mt-3 text-4xl text-foreground md:text-5xl">Selected work</h2>
+            <p className="eyebrow">A few projects</p>
+            <h2 className="font-display mt-3 text-4xl text-foreground md:text-5xl">
+              Some of the work I’ve done
+            </h2>
           </div>
-          <Link to="/work" className="inline-flex items-center gap-2 pb-1 text-sm font-medium text-accent hover:underline">
-            View all projects <ArrowUpRight size={16} aria-hidden="true" />
+          <Link
+            to="/work"
+            className="inline-flex items-center gap-2 pb-1 text-sm font-medium text-accent hover:underline"
+          >
+            See all my work <ArrowUpRight size={16} aria-hidden="true" />
           </Link>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
@@ -89,8 +97,12 @@ function HomePage() {
               </div>
               <div className="p-5">
                 <p className="eyebrow !text-accent">{project.category}</p>
-                <h3 className="font-display mt-2 text-xl leading-snug md:text-2xl">{project.title}</h3>
-                <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{project.summary}</p>
+                <h3 className="font-display mt-2 text-xl leading-snug md:text-2xl">
+                  {project.title}
+                </h3>
+                <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+                  {project.summary}
+                </p>
               </div>
             </Link>
           ))}
@@ -100,12 +112,14 @@ function HomePage() {
       <section className="container-x pb-16 md:pb-24">
         <div className="surface-panel flex flex-col gap-6 rounded-2xl p-6 md:flex-row md:items-center md:justify-between md:p-10">
           <div>
-            <p className="eyebrow">Let's work together</p>
-            <h2 className="font-display mt-2 text-3xl md:text-4xl">Have something in mind?</h2>
-            <p className="mt-2 text-muted-foreground">Let’s make it thoughtful, useful, and beautifully clear.</p>
+            <p className="eyebrow">Got something in mind?</p>
+            <h2 className="font-display mt-2 text-3xl md:text-4xl">Let’s talk about it.</h2>
+            <p className="mt-2 text-muted-foreground">
+              Tell me what you need, and I’ll see how I can help.
+            </p>
           </div>
           <Link to="/contact" className="btn btn-primary shrink-0">
-            Get in touch <ArrowRight size={16} aria-hidden="true" />
+            Send me a message <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </section>

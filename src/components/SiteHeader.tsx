@@ -35,7 +35,11 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-x flex h-16 items-center justify-between">
-        <Link to="/" className="font-display text-xl text-foreground" onClick={() => setOpen(false)}>
+        <Link
+          to="/"
+          className="font-display text-xl text-foreground"
+          onClick={() => setOpen(false)}
+        >
           {profile.name}
         </Link>
 
@@ -52,13 +56,17 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link to="/cv" className="btn btn-primary !px-4 !py-2.5 !text-xs">
-            View CV
+            My CV
           </Link>
         </nav>
 
         <div className="flex items-center gap-2 md:hidden">
-          <Link to="/cv" className="btn btn-primary !px-3 !py-1.5 !text-[10px]" onClick={() => setOpen(false)}>
-            CV
+          <Link
+            to="/cv"
+            className="btn btn-primary !px-3 !py-1.5 !text-[10px]"
+            onClick={() => setOpen(false)}
+          >
+            My CV
           </Link>
           <button
             aria-label={open ? "Close menu" : "Open menu"}
@@ -81,7 +89,10 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav aria-label="Mobile" className="fixed inset-x-0 top-16 bottom-0 bg-background/90 backdrop-blur-xl md:hidden">
+        <nav
+          aria-label="Mobile"
+          className="fixed inset-x-0 top-16 bottom-0 bg-background/90 backdrop-blur-xl md:hidden"
+        >
           <ul className="container-x flex flex-col pt-6">
             {nav.map((n) => (
               <li key={n.label} className="border-b border-black/5">
