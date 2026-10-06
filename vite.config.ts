@@ -5,6 +5,10 @@ import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
+  },
   plugins: [
     tanstackStart({ server: { entry: "server" } }),
     react(),
