@@ -11,7 +11,8 @@ export function SiteFooter() {
         <div className="flex flex-col gap-3 md:items-end">
           <div className="flex gap-6 text-sm">
             <a className="link-underline" href={socials.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-            <a className="link-underline" href={socials.github} target="_blank" rel="noreferrer">GitHub</a>
+            <a className="link-underline" href={socials.x} target="_blank" rel="noreferrer">X</a>
+            <a className="link-underline" href={socials.website} target="_blank" rel="noreferrer">Website</a>
             <a className="link-underline" href={`mailto:${socials.email}`}>Email</a>
           </div>
           <p className="text-xs text-muted-foreground">© 2026 {profile.name}. All rights reserved.</p>

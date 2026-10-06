@@ -1,23 +1,27 @@
 // Edit this file to update your portfolio content.
-// Fields marked "TODO" are placeholders — replace them with your real details.
+import portraitAsset from "@/assets/benjamin-ehirim.png.asset.json";
+import cvAsset from "@/assets/benjamin-ehirim-cv.pdf.asset.json";
 
 export const profile = {
   name: "Ehirim Benjamin",
   initials: "EB",
-  headline: "Designer. Creative Technologist. AI-Assisted Builder.",
-  tagline: "Designer • Creative Technologist • AI-Assisted Builder",
+  headline: "Graphic Designer. AI Web Creator. IT Support.",
+  tagline: "Graphic Designer • AI Web Creator • IT Support",
   intro:
-    "I combine visual design, technology and AI-assisted development to create brands, digital experiences and practical products that solve real problems.",
+    "Creative professional with experience in graphic design, branding, digital printing, IT support, and AI-assisted website and app building. I use modern AI and no-code tools to create practical digital solutions for businesses and clients.",
   status: "Available for opportunities",
-  portrait: "" as string, // TODO: add the URL of your photograph
-  cvUrl: "/cv-placeholder.pdf", // TODO: replace with your final CV PDF
+  location: "Lagos, Nigeria",
+  phone: "+234 810 727 1610",
+  portrait: portraitAsset.url,
+  cvUrl: cvAsset.url,
 };
 
 export const socials = {
-  email: "hello@example.com", // TODO
-  linkedin: "https://www.linkedin.com/", // TODO
-  github: "https://github.com/", // TODO
-  whatsapp: "", // TODO: e.g. https://wa.me/234XXXXXXXXXX (leave empty to hide)
+  email: "decencybenjamin@gmail.com",
+  linkedin: "https://www.linkedin.com/in/ehirim-benjamin-a14127236",
+  x: "https://x.com/DecencyBenjamin",
+  website: "https://benovertech.vercel.app",
+  whatsapp: "https://wa.me/2348107271610",
 };
 
 export type Category = "Web" | "Branding" | "Graphic Design" | "Print" | "Digital Products";
@@ -52,16 +56,32 @@ const TBA = "Details to be added.";
 
 export const projects: Project[] = [
   {
-    slug: "quotation-web-app",
-    title: "Quotation Web Application",
+    slug: "bigwig-quotation-web-app",
+    title: "Job Quotation Web App",
     category: "Digital Products",
     year: "Year TBA",
     summary:
-      "A digital quotation and invoicing tool that helps a business prepare and manage professional quotations more efficiently.",
+      "A responsive job quotation web app for BIG WIG Architecture and Building Construction Company, simplifying cost estimation, quotation generation, and document management.",
     role: "Design and AI-Assisted Development",
-    tools: ["Lovable", "AI tools"],
+    tools: ["AI-assisted tools", "No-code/low-code"],
     overview:
-      "A web application created to help a business prepare and manage professional quotations more efficiently.",
+      "Designed and developed a responsive job quotation web app for BIG WIG Architecture and Building Construction Company, simplifying cost estimation, quotation generation, and document management.",
+    challenge: TBA,
+    approach: TBA,
+    solution: TBA,
+    gallery: [],
+  },
+  {
+    slug: "bigwig-website",
+    title: "BIG WIG Architect Official Website",
+    category: "Web",
+    year: "Year TBA",
+    summary:
+      "The official responsive website for BIG WIG Architecture and Building Construction, showcasing its services, projects, and company information.",
+    role: "Website Design and AI-Assisted Development",
+    tools: ["AI-assisted tools", "No-code/low-code"],
+    overview:
+      "Designed and developed the company's official responsive website to showcase its architectural and construction services, projects, and company information with a clean and user-friendly interface.",
     challenge: TBA,
     approach: TBA,
     solution: TBA,
@@ -69,29 +89,15 @@ export const projects: Project[] = [
   },
   {
     slug: "coach-zinny-website",
-    title: "Coach Zinny Website",
+    title: "Coach Zinny Therapy Website",
     category: "Web",
     year: "Year TBA",
     summary:
-      "A website for an emotional therapist — sharing her services, enabling session bookings and offering access to her books and resources.",
+      "A responsive therapy and wellness website with session booking, book sales, and service information.",
     role: "Website Design and AI-Assisted Development",
-    tools: ["Lovable"],
+    tools: ["AI-assisted tools", "No-code/low-code"],
     overview:
-      "Website created for an emotional therapist to provide information about her services, allow clients to book sessions and access her books and resources.",
-    challenge: TBA,
-    approach: TBA,
-    solution: TBA,
-    gallery: [],
-  },
-  {
-    slug: "corporate-client-website",
-    title: "Corporate Client Website",
-    category: "Web",
-    year: "Year TBA",
-    summary: "The official company website I designed and developed for a client.",
-    role: "Website Design and AI-Assisted Development",
-    tools: ["Tools TBA"],
-    overview: "Official company website designed and developed for a client. Client details to be added.",
+      "Designed and developed a responsive therapy and wellness website with session booking, book sales, and service information, creating a smooth and user-friendly experience for clients.",
     challenge: TBA,
     approach: TBA,
     solution: TBA,
@@ -104,7 +110,7 @@ export const projects: Project[] = [
     year: "Ongoing",
     summary: "Logos, visual identities, brand guidelines and marketing materials.",
     role: "Brand Identity Designer",
-    tools: ["Adobe creative tools"],
+    tools: ["CorelDRAW", "Photo editing tools"],
     overview: "A collection of logo and visual identity projects. Individual projects to be added.",
     challenge: TBA,
     approach: TBA,
@@ -118,7 +124,7 @@ export const projects: Project[] = [
     year: "Ongoing",
     summary: "Flyers, banners, business cards, event materials and other professional print work.",
     role: "Print Designer",
-    tools: ["Adobe creative tools", "Canva"],
+    tools: ["CorelDRAW", "Digital printing"],
     overview: "Selected print work. Individual pieces to be added.",
     challenge: TBA,
     approach: TBA,
@@ -132,7 +138,7 @@ export const projects: Project[] = [
     year: "Ongoing",
     summary: "Selected social media creatives and digital campaign designs.",
     role: "Graphic & Digital Content Designer",
-    tools: ["Adobe creative tools", "Canva", "CapCut"],
+    tools: ["CorelDRAW", "Photo editing tools"],
     overview: "A gallery of selected social media creative work. Pieces to be added.",
     challenge: TBA,
     approach: TBA,
@@ -144,23 +150,23 @@ export const projects: Project[] = [
 export const skills: { group: string; items: string[] }[] = [
   {
     group: "Design",
-    items: ["Graphic Design", "Brand Identity", "Print Design", "Social Media Design", "Visual Communication", "Layout & Typography"],
+    items: ["Graphic Design", "Branding & Visual Identity", "CorelDRAW", "Photo Editing & Retouching", "Digital Printing", "Layout & Typography"],
   },
   {
     group: "Digital & Web",
-    items: ["Responsive Web Design", "UI Design", "Landing Pages", "Website Prototyping", "AI-Assisted Web Development"],
+    items: ["AI-Assisted Website Building", "AI-Assisted App Building", "No-Code/Low-Code Tools", "Basic HTML/CSS", "Website Deployment"],
   },
   {
-    group: "Creative Technology",
-    items: ["AI-Assisted Development", "AI Content Workflows", "Generative AI Tools", "Creative Automation", "Digital Content Production"],
+    group: "Technical",
+    items: ["IT Support", "Computer Operations", "Digital Printer Operation & Maintenance"],
   },
   {
     group: "Professional",
-    items: ["Creative Problem Solving", "Client Communication", "Project Execution", "Attention to Detail"],
+    items: ["Client Communication", "Project Management", "Problem Solving", "Time Management", "Team Coordination"],
   },
 ];
 
-export const tools = ["Adobe Creative Tools", "Canva", "Lovable", "CapCut", "AI Tools", "Vercel", "GitHub"];
+export const tools = ["CorelDRAW", "AI-Assisted Tools", "No-Code/Low-Code Tools", "HTML/CSS", "Digital Printers", "Vercel"];
 
 export type Experience = {
   position: string;
@@ -175,32 +181,94 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    position: "Graphic Designer & Creative Technologist", // TODO: confirm title
-    organization: "BENOVERTECH",
-    type: "Self-employed",
+    position: "Chief Operating and Maintenance Officer",
+    organization: "Exceeding Stone Industry Limited",
+    type: "Oyo State",
     start: "Start date TBA",
     end: "Present",
-    description:
-      "Design, print and technology work — brand identities, print materials, social media creatives and AI-assisted websites and web tools.",
-    achievements: [],
-    tools: ["Adobe creative tools", "Canva", "Lovable"],
+    description: "Oversaw routine equipment checks, maintenance scheduling, and basic troubleshooting.",
+    achievements: [
+      "Monitored workplace procedures and supported timely completion of assigned tasks.",
+      "Worked with staff to reduce downtime and maintain efficient operations.",
+    ],
+    tools: [],
   },
   {
-    position: "Position TBA",
-    organization: "Organization TBA",
-    type: "Employment type TBA",
-    start: "Start TBA",
-    end: "End TBA",
-    description: "Add another role here.",
-    achievements: [],
+    position: "Operating Officer",
+    organization: "Aristocrat Industries Limited",
+    type: "Ota, Ogun State",
+    start: "Start date TBA",
+    end: "End date TBA",
+    description: "Monitored equipment use and reported faults or maintenance needs.",
+    achievements: [
+      "Assisted with workflow coordination to improve efficiency and reduce delays.",
+      "Worked with team members to maintain safe and organized operations.",
+    ],
     tools: [],
+  },
+  {
+    position: "Graphic Designer / Managing Director",
+    organization: "Decent Prints Graphics and Tech Ltd",
+    type: "Uli, Anambra State",
+    start: "Start date TBA",
+    end: "End date TBA",
+    description: "Managed customer communication, pricing, project scheduling, and business operations.",
+    achievements: [
+      "Managed client design and print projects from initial brief to final delivery.",
+      "Created branding, promotional, social media, and print materials for clients.",
+      "Coordinated printing, production, and finishing to maintain quality standards.",
+    ],
+    tools: ["CorelDRAW", "Digital printing"],
+  },
+  {
+    position: "Graphic Designer",
+    organization: "Benovertech Group Ltd",
+    type: "Awka, Anambra State",
+    start: "Start date TBA",
+    end: "End date TBA",
+    description: "Created branding, social media, promotional, and print designs for clients.",
+    achievements: [
+      "Managed design projects from client brief to final delivery.",
+      "Prepared artwork for digital and large-format printing.",
+    ],
+    tools: ["CorelDRAW"],
+  },
+  {
+    position: "Graphic Designer / CorelDRAW Tutor",
+    organization: "ICT Zone One",
+    type: "Sango Ota, Ogun State",
+    start: "Start date TBA",
+    end: "End date TBA",
+    description: "Trained students in CorelDRAW and practical graphic design techniques.",
+    achievements: [
+      "Created print and digital designs for client projects.",
+      "Guided learners in branding, layout design, typography, and print preparation.",
+    ],
+    tools: ["CorelDRAW"],
+  },
+];
+
+export const volunteering = [
+  {
+    position: "Chairman, Board of Trustees & Electoral Team Leader",
+    organization: "PCSS Association",
+    location: "Ihiala, Anambra State",
+    description:
+      "Led alumni coordination and electoral activities, supported decision-making, organized members, and helped ensure transparent and effective association processes.",
+  },
+  {
+    position: "School Administrator",
+    organization: "New Covenant Foundation School",
+    location: "Uli, Anambra State",
+    description:
+      "Oversee school operations, staff coordination, student welfare, parent communication, and administrative planning.",
   },
 ];
 
 export const education = [
   {
-    course: "Computer Science",
-    school: "Chukwuemeka Odumegwu Ojukwu University",
+    course: "B.Sc. Computer Science",
+    school: "Chukwuemeka Odumegwu Ojukwu University, Anambra State",
     dates: "Dates TBA",
     notes: "",
   },
