@@ -5,9 +5,9 @@ export const profile = {
   initials: "BE",
   headline: "Graphic designer, website builder & IT support",
   tagline: "Graphic design · Websites · IT support",
-  heroTitle: "Need a design, a website or help with your tech?",
+  heroTitle: "Need a design, a website, or help with your tech?",
   intro:
-    "I’m a graphic designer and web creator based in Lagos. I help people and businesses bring their ideas to life—from logos and print work to websites and simple apps. I also handle IT support, so I’m happy to help when the tech needs sorting.",
+    "I’m a graphic designer and web creator based in Lagos. I help people and businesses bring their ideas to life, from logos and print work to websites and simple apps. I also handle IT support, so I’m happy to help when the tech needs sorting.",
   about: [
     "My name is Benjamin, and I’m a graphic designer and website builder based in Lagos. I’ve worked on branding, print and digital projects, and I also have hands-on experience with IT support.",
     "I like taking an idea, figuring out what it needs, and making something clear and useful out of it. That could be a flyer, a website or a small app—whatever helps get the job done.",
