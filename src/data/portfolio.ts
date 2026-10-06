@@ -47,6 +47,7 @@ export type Project = {
   role: string;
   tools: string[];
   cover?: string;
+  coverFit?: "contain" | "cover";
   overview: string;
   challenge: string;
   approach: string;
@@ -114,6 +115,8 @@ export const projects: Project[] = [
     title: "Brand Identity Work",
     category: "Branding",
     year: "Ongoing",
+    cover: "/projects/brand-identity-logos.png",
+    coverFit: "contain",
     summary: "A mix of logos, brand identities and marketing designs I’ve worked on.",
     role: "Brand Identity Designer",
     tools: ["CorelDRAW", "Photo editing tools"],
@@ -121,13 +124,15 @@ export const projects: Project[] = [
     challenge: TBA,
     approach: TBA,
     solution: TBA,
-    gallery: [],
+    gallery: ["/projects/marinade-magic-packaging.png"],
   },
   {
     slug: "print-design",
     title: "Print Design",
     category: "Print",
     year: "Ongoing",
+    cover: "/projects/print-design-samples.png",
+    coverFit: "contain",
     summary: "Flyers, banners, business cards and other things people need printed.",
     role: "Print Designer",
     tools: ["CorelDRAW", "Digital printing"],
@@ -142,6 +147,8 @@ export const projects: Project[] = [
     title: "Social Media & Digital Campaigns",
     category: "Graphic Design",
     year: "Ongoing",
+    cover: "/projects/campaign-graphics-gallery.png",
+    coverFit: "contain",
     summary: "Social media graphics and digital campaign designs I’ve worked on.",
     role: "Graphic & Digital Content Designer",
     tools: ["CorelDRAW", "Photo editing tools"],

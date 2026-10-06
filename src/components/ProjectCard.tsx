@@ -3,7 +3,14 @@ import type { Project } from "@/data/portfolio";
 
 export function ProjectCover({ project, className = "" }: { project: Project; className?: string }) {
   if (project.cover)
-    return <img src={project.cover} alt={`${project.title} cover`} loading="lazy" className={`h-full w-full object-cover ${className}`} />;
+    return (
+      <img
+        src={project.cover}
+        alt={`${project.title} cover`}
+        loading="lazy"
+        className={`h-full w-full ${project.coverFit === "contain" ? "object-contain bg-muted/30" : "object-cover"} ${className}`}
+      />
+    );
   return (
     <div className={`placeholder-art flex h-full w-full items-center justify-center ${className}`}>
       <div className="text-center">

@@ -62,7 +62,7 @@ function CaseStudy() {
           {p.gallery.length ? (
             <div className="grid gap-4">{p.gallery.map((g) => <img key={g} src={g} alt={`${p.title} screenshot`} loading="lazy" className="rounded-xl" />)}</div>
           ) : (
-            <span className="text-muted-foreground">I haven’t added the project images yet.</span>
+            <span className="text-muted-foreground">The main project image is shown above.</span>
           )}
         </Block>
         <Block title="How it went">{p.outcome ?? <span className="text-muted-foreground">I haven’t added this part yet.</span>}</Block>
