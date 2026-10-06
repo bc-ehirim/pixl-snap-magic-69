@@ -198,7 +198,7 @@ export const skills: { group: string; items: string[] }[] = [
   },
   {
     group: "Digital & Web",
-    items: ["Building websites with AI", "Building apps with AI", "No code and low code tools", "Basic HTML/CSS", "Website deployment"],
+    items: ["Building websites with AI", "Building apps with AI", "Basic HTML/CSS", "Website deployment"],
   },
   {
     group: "Technical",
@@ -210,7 +210,7 @@ export const skills: { group: string; items: string[] }[] = [
   },
 ];
 
-export const tools = ["CorelDRAW", "AI tools", "No code and low code tools", "HTML/CSS", "Digital printers", "Vercel"];
+export const tools = ["CorelDRAW", "AI tools", "HTML/CSS", "Digital printers", "Vercel"];
 
 export type Experience = {
   position: string;
