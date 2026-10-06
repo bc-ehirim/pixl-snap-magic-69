@@ -82,9 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Benjamin Ehirim" },
     ],
-    links: [
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-    ],
+    links: [{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
   }),
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
