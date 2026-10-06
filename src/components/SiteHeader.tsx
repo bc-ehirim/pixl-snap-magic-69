@@ -30,10 +30,8 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled || open
-          ? "border-b border-black/5 bg-white/70 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
+      className={`site-header sticky top-0 z-50 transition-all duration-300 ${
+        scrolled || open ? "is-scrolled" : ""
       }`}
     >
       <div className="container-x flex h-16 items-center justify-between">
@@ -66,7 +64,7 @@ export function SiteHeader() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
-            className="relative h-10 w-10 rounded-full border border-black/5 bg-white/50"
+            className="relative h-10 w-10 rounded-full border border-black/10 bg-white/70"
           >
             <span
               className={`absolute left-3 right-3 h-px bg-foreground transition-transform ${

@@ -42,7 +42,7 @@ export function ContactForm() {
 
   const field = "mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 outline-none transition-colors focus:border-foreground";
   return (
-    <form noValidate onSubmit={onSubmit} className="grid gap-5">
+    <form noValidate onSubmit={onSubmit} className="contact-form grid gap-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="text-sm font-medium">Name
           <input name="name" autoComplete="name" className={field} aria-invalid={!!errors.name} />
