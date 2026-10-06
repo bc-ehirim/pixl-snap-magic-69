@@ -80,9 +80,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ehirim Benjamin — Designer & Creative Technologist" },
-      { name: "description", content: "Portfolio of Ehirim Benjamin, a multidisciplinary creative professional working across graphic design, branding, digital experiences and AI-assisted development." },
-      { name: "author", content: "Ehirim Benjamin" },
+      { title: "Benjamin Ehirim — Designer & Creative Technologist" },
+      { name: "description", content: "Portfolio of Benjamin Ehirim, a multidisciplinary creative professional working across graphic design, branding, digital experiences and AI-assisted development." },
+      { name: "author", content: "Benjamin Ehirim" },
     ],
     links: [
       {

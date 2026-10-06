@@ -4,10 +4,10 @@ import { ContactForm, ContactLinks } from "@/components/ContactForm";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Ehirim Benjamin" },
-      { name: "description", content: "Get in touch with Ehirim Benjamin about job opportunities, freelance projects or collaborations." },
-      { property: "og:title", content: "Contact — Ehirim Benjamin" },
-      { property: "og:description", content: "Get in touch with Ehirim Benjamin about job opportunities, freelance projects or collaborations." },
+      { title: "Contact — Benjamin Ehirim" },
+      { name: "description", content: "Get in touch with Benjamin Ehirim about job opportunities, freelance projects or collaborations." },
+      { property: "og:title", content: "Contact — Benjamin Ehirim" },
+      { property: "og:description", content: "Get in touch with Benjamin Ehirim about job opportunities, freelance projects or collaborations." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
