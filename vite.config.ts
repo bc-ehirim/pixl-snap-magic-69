@@ -1,19 +1,13 @@
 import tailwindcss from "@tailwindcss/vite";
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import react from "@vitejs/plugin-react";
-import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  build: {
-    outDir: "dist",
-    emptyOutDir: true,
-  },
   plugins: [
-    tanstackStart({ server: { entry: "server" } }),
+    tanstackRouter({ target: "react", autoCodeSplitting: true }),
     react(),
     tailwindcss(),
-    nitro({ preset: "cloudflare-module" }),
   ],
   resolve: {
     tsconfigPaths: true,

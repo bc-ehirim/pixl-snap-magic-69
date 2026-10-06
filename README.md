@@ -1,6 +1,7 @@
 # Benjamin Ehirim Portfolio
 
-A React portfolio built with Vite, TanStack Start, Tailwind CSS, and TypeScript.
+A client-rendered React portfolio built with Vite, TanStack Router, Tailwind CSS,
+and TypeScript.
 
 ## Requirements
 
@@ -21,10 +22,9 @@ npm run build
 npm run preview
 ```
 
-The production build emits a generic static bundle to `dist` for hosting providers
-that expect a publish directory, while Nitro also generates the Cloudflare Worker
-bundle in `.output`. Deploy `.output` with the Cloudflare tooling when using the
-`cloudflare-module` preset, or publish `dist` on a static host.
+The production build creates a static site in `dist`. Vercel is configured to
+publish that directory and rewrite application routes to `index.html`, so direct
+visits to nested routes work with client-side routing.
 
 ## Checks
 
