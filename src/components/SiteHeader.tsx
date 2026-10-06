@@ -21,23 +21,16 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", on);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
   return (
     <header
       className={`site-header sticky top-0 z-50 transition-all duration-300 ${
         scrolled || open ? "is-scrolled" : ""
       }`}
     >
-      <div className="container-x flex h-16 items-center justify-between">
+      <div className="container-x relative flex h-16 items-center justify-between gap-3">
         <Link
           to="/"
-          className="font-display text-xl text-foreground"
+          className="font-display text-lg text-foreground sm:text-xl"
           onClick={() => setOpen(false)}
         >
           {profile.name}
@@ -60,7 +53,7 @@ export function SiteHeader() {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="ml-auto flex items-center gap-2 md:hidden">
           <Link
             to="/cv"
             className="btn btn-primary !px-3 !py-1.5 !text-[10px]"
@@ -72,43 +65,64 @@ export function SiteHeader() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
-            className="relative h-10 w-10 rounded-full border border-black/10 bg-white/70"
+            className="relative h-10 w-10 rounded-full border border-black/10 bg-white/80 shadow-sm transition-colors hover:bg-white"
           >
             <span
-              className={`absolute left-3 right-3 h-px bg-foreground transition-transform ${
-                open ? "top-1/2 rotate-45" : "top-[16px]"
+              className={`absolute left-3 right-3 h-px rounded-full bg-foreground transition-all ${
+                open ? "top-1/2 rotate-45" : "top-[15px]"
               }`}
             />
             <span
-              className={`absolute left-3 right-3 h-px bg-foreground transition-transform ${
-                open ? "top-1/2 -rotate-45" : "top-[24px]"
+              className={`absolute left-3 right-3 h-px rounded-full bg-foreground transition-all ${
+                open ? "top-1/2 -rotate-45" : "top-[23px]"
               }`}
             />
           </button>
         </div>
       </div>
 
-      {open && (
+      <div
+        className={`md:hidden ${
+          open ? "pointer-events-auto opacity-100 translate-y-0" : "pointer-events-none opacity-0 -translate-y-2"
+        } absolute inset-x-0 top-full z-40 px-3 pb-3 pt-2 transition-all duration-200`}
+        aria-hidden={!open}
+      >
         <nav
           aria-label="Mobile"
-          className="fixed inset-x-0 top-16 bottom-0 bg-background/90 backdrop-blur-xl md:hidden"
+          className="overflow-hidden rounded-2xl border border-black/5 bg-background/95 shadow-[0_15px_38px_rgba(17,17,17,0.08)] backdrop-blur-xl"
         >
-          <ul className="container-x flex flex-col pt-6">
+          <div className="flex items-center justify-between border-b border-black/5 px-4 py-3">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+              Menu
+            </span>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+            >
+              Close
+            </button>
+          </div>
+
+          <ul className="divide-y divide-black/5">
             {nav.map((n) => (
-              <li key={n.label} className="border-b border-black/5">
+              <li key={n.label}>
                 <Link
                   to={n.to}
                   {...("hash" in n ? { hash: n.hash } : {})}
                   onClick={() => setOpen(false)}
-                  className="font-display block py-4 text-3xl text-foreground"
+                  className="flex items-center justify-between px-4 py-3.5 text-base font-medium text-foreground transition-colors hover:bg-black/[0.02]"
                 >
-                  {n.label}
+                  <span>{n.label}</span>
+                  <span aria-hidden="true" className="text-lg text-muted-foreground">
+                    →
+                  </span>
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
-      )}
+      </div>
     </header>
   );
 }
