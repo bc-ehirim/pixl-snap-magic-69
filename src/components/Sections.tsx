@@ -1,4 +1,4 @@
-import { education, experience, skills, tools } from "@/data/portfolio";
+import { education, experience, skills, tools, volunteering } from "@/data/portfolio";
 import { Reveal } from "./Reveal";
 
 export function SectionHead({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
@@ -70,6 +70,18 @@ export function ExperienceSection() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="mt-16">
+        <p className="eyebrow">Volunteering & Leadership</p>
+        <div className="mt-4 grid gap-8 md:grid-cols-2">
+          {volunteering.map((v) => (
+            <div key={v.position} className="border-t pt-4">
+              <h3 className="text-xl font-semibold">{v.position}</h3>
+              <p className="text-muted-foreground">{v.organization} — {v.location}</p>
+              <p className="mt-3 max-w-2xl leading-relaxed">{v.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
