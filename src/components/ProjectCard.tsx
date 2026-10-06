@@ -41,9 +41,8 @@ export function ProjectCard({ project }: { project: Project }) {
           <dt className="text-muted-foreground">Role</dt><dd>{project.role}</dd>
           <dt className="text-muted-foreground">Tools</dt><dd>{project.tools.join(", ")}</dd>
         </dl>
-        <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold">
-          View project details{" "}
-          <span className="transition-transform group-hover:translate-x-1">→</span>
+        <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-foreground/80">
+          <span className="transition-transform group-hover:translate-x-0.5"> </span>
         </span>
       </Link>
     </article>

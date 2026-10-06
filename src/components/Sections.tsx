@@ -46,33 +46,38 @@ export function ExperienceSection() {
       <SectionHead eyebrow="Experience" title="My work experience" />
 
       <ol className="space-y-5">
-        {experience.map((e, i) => (
-          <Reveal as="li" key={i} className="experience-card rounded-[1.8rem] p-5 md:p-7">
-            <div className="grid gap-5 md:grid-cols-[14rem_1fr]">
-              <div className="text-sm leading-relaxed text-muted-foreground">
-                <p>{e.start} — {e.end}</p>
-                <p className="mt-2 text-xs uppercase tracking-[0.12em]">{e.type}</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground">{e.position}</h3>
-                <p className="mt-1 text-muted-foreground">{e.organization}</p>
-                <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">{e.description}</p>
+        {experience.map((e, i) => {
+          const hasDateRange = !!e.start?.trim() && e.start !== "Dates not listed" && !!e.end?.trim() && e.end !== "Dates not listed";
 
-                {e.achievements.length > 0 && (
-                  <ul className="mt-4 list-disc space-y-1 pl-5 text-sm leading-relaxed text-muted-foreground">
-                    {e.achievements.map((a) => <li key={a}>{a}</li>)}
-                  </ul>
-                )}
+          return (
+            <Reveal as="li" key={i} className="experience-card rounded-[1.8rem] p-5 md:p-7">
+              <div className="grid gap-5 md:grid-cols-[14rem_1fr]">
+                <div className="text-sm leading-relaxed text-muted-foreground">
+                  {hasDateRange && <p>{e.start} — {e.end}</p>}
+                  <p className={hasDateRange ? "mt-2 text-xs uppercase tracking-[0.12em]" : "text-xs uppercase tracking-[0.12em]"}>{e.type}</p>
+                </div>
 
-                {e.tools.length > 0 && (
-                  <p className="mt-4 text-xs uppercase tracking-[0.12em] text-muted-foreground">
-                    {e.tools.join(" · ")}
-                  </p>
-                )}
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">{e.position}</h3>
+                  <p className="mt-1 text-muted-foreground">{e.organization}</p>
+                  <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">{e.description}</p>
+
+                  {e.achievements.length > 0 && (
+                    <ul className="mt-4 list-disc space-y-1 pl-5 text-sm leading-relaxed text-muted-foreground">
+                      {e.achievements.map((a) => <li key={a}>{a}</li>)}
+                    </ul>
+                  )}
+
+                  {e.tools.length > 0 && (
+                    <p className="mt-4 text-xs uppercase tracking-[0.12em] text-muted-foreground">
+                      {e.tools.join(" · ")}
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </ol>
 
       <div className="mt-16">
