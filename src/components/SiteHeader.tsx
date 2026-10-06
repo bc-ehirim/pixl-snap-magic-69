@@ -31,7 +31,7 @@ export function SiteHeader() {
         </Link>
         <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
           {nav.map((n) => (
-            <Link key={n.label} to={n.to} hash={"hash" in n ? n.hash : undefined} className="link-underline text-sm text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground" }} activeOptions={{ includeHash: true }}>
+            <Link key={n.label} to={n.to} {...("hash" in n ? { hash: n.hash } : {})} className="link-underline text-sm text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground" }} activeOptions={{ includeHash: true }}>
               {n.label}
             </Link>
           ))}
@@ -50,7 +50,7 @@ export function SiteHeader() {
           <ul className="container-x flex flex-col pt-6">
             {nav.map((n) => (
               <li key={n.label} className="border-b">
-                <Link to={n.to} hash={"hash" in n ? n.hash : undefined} onClick={() => setOpen(false)} className="font-display block py-4 text-4xl">
+                <Link to={n.to} {...("hash" in n ? { hash: n.hash } : {})} onClick={() => setOpen(false)} className="font-display block py-4 text-4xl">
                   {n.label}
                 </Link>
               </li>
