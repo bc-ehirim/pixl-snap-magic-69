@@ -4,7 +4,6 @@ import { Portrait } from "@/components/Portrait";
 import { WorkGrid } from "@/components/WorkGrid";
 import { Reveal } from "@/components/Reveal";
 import { SectionHead, SkillsSection, ExperienceSection } from "@/components/Sections";
-import { ContactForm, ContactLinks } from "@/components/ContactForm";
 
 const title = "Ehirim Benjamin — Designer & Creative Technologist";
 const description =
@@ -82,6 +81,3 @@ function Home() {
     </>
   );
 }
-
-// Re-exported for the contact page
-export { ContactForm, ContactLinks };
