@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { profile } from "@/data/portfolio";
 
@@ -65,18 +66,14 @@ export function SiteHeader() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
-            className="relative h-10 w-10 rounded-full border border-black/10 bg-white/80 shadow-sm transition-colors hover:bg-white"
+            className="inline-flex h-10 items-center gap-2 rounded-full bg-foreground px-3 text-xs font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-white"
           >
-            <span
-              className={`absolute left-3 right-3 h-px rounded-full bg-foreground transition-all ${
-                open ? "top-1/2 rotate-45" : "top-[15px]"
-              }`}
-            />
-            <span
-              className={`absolute left-3 right-3 h-px rounded-full bg-foreground transition-all ${
-                open ? "top-1/2 -rotate-45" : "top-[23px]"
-              }`}
-            />
+            {open ? (
+              <X size={17} strokeWidth={2.5} aria-hidden="true" />
+            ) : (
+              <Menu size={17} strokeWidth={2.5} aria-hidden="true" />
+            )}
+            <span>{open ? "Close" : "Menu"}</span>
           </button>
         </div>
       </div>

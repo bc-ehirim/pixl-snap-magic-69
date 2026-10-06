@@ -31,7 +31,6 @@ function HomePage() {
         <div className="hero-shell">
           <div className="relative z-10 py-3 md:py-6">
             <span className="apple-pill">{profile.status}</span>
-            <p className="eyebrow mt-8">{profile.location}</p>
             <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[0.98] md:text-7xl lg:text-[5.5rem]">
               {profile.heroTitle}
             </h1>
