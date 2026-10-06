@@ -5,9 +5,9 @@ import { SectionHead } from "@/components/Sections";
 export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
-      { title: "Work — Ehirim Benjamin" },
+      { title: "Work | Ehirim Benjamin" },
       { name: "description", content: "Have a look at the design, branding, print and web projects I’ve worked on." },
-      { property: "og:title", content: "Work — Ehirim Benjamin" },
+      { property: "og:title", content: "Work | Ehirim Benjamin" },
       { property: "og:description", content: "Have a look at the design, branding, print and web projects I’ve worked on." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

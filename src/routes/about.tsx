@@ -6,9 +6,9 @@ import { ExperienceSection, SkillsSection } from "@/components/Sections";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Benjamin Ehirim" },
+      { title: "About | Benjamin Ehirim" },
       { name: "description", content: "A little about Benjamin Ehirim, a graphic designer and website builder based in Lagos." },
-      { property: "og:title", content: "About — Benjamin Ehirim" },
+      { property: "og:title", content: "About | Benjamin Ehirim" },
       { property: "og:description", content: "A little about Benjamin Ehirim, a graphic designer and website builder based in Lagos." },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },

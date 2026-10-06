@@ -33,7 +33,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className="mt-5 flex items-baseline justify-between gap-4">
           <h3 className="font-display text-2xl md:text-3xl">{project.title}</h3>
-          <span className="shrink-0 text-xs text-muted-foreground">{project.year}</span>
+          {project.year && <span className="shrink-0 text-xs text-muted-foreground">{project.year}</span>}
         </div>
         <p className="eyebrow mt-1 !text-accent">{project.category}</p>
         <p className="mt-3 max-w-prose text-sm leading-relaxed text-muted-foreground">{project.summary}</p>
@@ -41,9 +41,6 @@ export function ProjectCard({ project }: { project: Project }) {
           <dt className="text-muted-foreground">Role</dt><dd>{project.role}</dd>
           <dt className="text-muted-foreground">Tools</dt><dd>{project.tools.join(", ")}</dd>
         </dl>
-        <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-foreground/80">
-          <span className="transition-transform group-hover:translate-x-0.5"> </span>
-        </span>
       </Link>
     </article>
   );

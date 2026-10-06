@@ -25,7 +25,7 @@ export function ContactForm() {
     setStatus("loading");
     try {
       // Opens the visitor's email app with the message pre-filled.
-      const body = `${message}\n\n— ${name}${company ? `, ${company}` : ""}\n${email}`;
+      const body = `${message}\n\nFrom: ${name}${company ? `, ${company}` : ""}\n${email}`;
       window.location.href = `mailto:${socials.email}?subject=${encodeURIComponent(`Portfolio enquiry from ${name}`)}&body=${encodeURIComponent(body)}`;
       setTimeout(() => setStatus("success"), 600);
     } catch {

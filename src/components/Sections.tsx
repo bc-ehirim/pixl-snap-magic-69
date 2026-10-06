@@ -47,14 +47,16 @@ export function ExperienceSection() {
 
       <ol className="space-y-5">
         {experience.map((e, i) => {
-          const hasDateRange = !!e.start?.trim() && e.start !== "Dates not listed" && !!e.end?.trim() && e.end !== "Dates not listed";
+          const start = e.start.trim();
+          const end = e.end.trim();
+          const dateLabel = start && end ? `${start} to ${end}` : start || end;
 
           return (
             <Reveal as="li" key={i} className="experience-card rounded-[1.8rem] p-5 md:p-7">
               <div className="grid gap-5 md:grid-cols-[14rem_1fr]">
                 <div className="text-sm leading-relaxed text-muted-foreground">
-                  {hasDateRange && <p>{e.start} — {e.end}</p>}
-                  <p className={hasDateRange ? "mt-2 text-xs uppercase tracking-[0.12em]" : "text-xs uppercase tracking-[0.12em]"}>{e.type}</p>
+                  {dateLabel && <p>{dateLabel}</p>}
+                  {e.type && <p className={dateLabel ? "mt-2 text-xs uppercase tracking-[0.12em]" : "text-xs uppercase tracking-[0.12em]"}>{e.type}</p>}
                 </div>
 
                 <div>
@@ -83,8 +85,8 @@ export function ExperienceSection() {
       <div className="mt-16">
         <p className="eyebrow">Education</p>
         {education.map((ed) => (
-          <div key={ed.course} className="mt-5 grid gap-3 rounded-[1.6rem] border border-black/5 bg-white/40 p-5 md:grid-cols-[14rem_1fr]">
-            <p className="text-sm text-muted-foreground">{ed.dates}</p>
+          <div key={ed.course} className={`mt-5 grid gap-3 rounded-[1.6rem] border border-black/5 bg-white/40 p-5 ${ed.dates ? "md:grid-cols-[14rem_1fr]" : ""}`}>
+            {ed.dates && <p className="text-sm text-muted-foreground">{ed.dates}</p>}
             <div>
               <h3 className="text-xl font-semibold text-foreground">{ed.course}</h3>
               <p className="mt-1 text-muted-foreground">{ed.school}</p>
@@ -100,7 +102,7 @@ export function ExperienceSection() {
           {volunteering.map((v) => (
             <div key={v.position} className="rounded-[1.6rem] border border-black/5 bg-white/40 p-5">
               <h3 className="text-xl font-semibold text-foreground">{v.position}</h3>
-              <p className="mt-1 text-muted-foreground">{v.organization} — {v.location}</p>
+              <p className="mt-1 text-muted-foreground">{v.organization}, {v.location}</p>
               <p className="mt-3 text-base leading-relaxed text-muted-foreground">{v.description}</p>
             </div>
           ))}

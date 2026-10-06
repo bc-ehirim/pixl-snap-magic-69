@@ -4,7 +4,7 @@ import { profile, projects } from "@/data/portfolio";
 import { Portrait } from "@/components/Portrait";
 import { ProjectCover } from "@/components/ProjectCard";
 
-const title = "Benjamin Ehirim — Designer & Creative Technologist";
+const title = "Benjamin Ehirim | Designer & Creative Technologist";
 const description =
   "I’m Benjamin, a graphic designer and web creator in Lagos. Have a look at my design, print and web projects.";
 

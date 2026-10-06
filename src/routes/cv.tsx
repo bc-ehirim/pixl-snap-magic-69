@@ -4,10 +4,10 @@ import { profile } from "@/data/portfolio";
 export const Route = createFileRoute("/cv")({
   head: () => ({
     meta: [
-      { title: "CV — Benjamin Ehirim" },
+      { title: "CV | Benjamin Ehirim" },
       { name: "description", content: "View or download Benjamin Ehirim’s CV." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "CV — Benjamin Ehirim" },
+      { property: "og:title", content: "CV | Benjamin Ehirim" },
       { property: "og:description", content: "View or download Benjamin Ehirim’s CV." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
