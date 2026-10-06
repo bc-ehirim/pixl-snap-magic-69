@@ -451,6 +451,15 @@ main {
     padding: 1.25rem;
   }
 
+  .hero-shell::before {
+    inset: auto -20% -30% 25%;
+    height: 12rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
   .hero-panel {
     min-height: 280px;
   }
