@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { profile } from "@/data/portfolio";
 
@@ -31,32 +31,49 @@ export function SiteHeader() {
       <div className="container-x relative flex h-16 items-center justify-between gap-3">
         <Link
           to="/"
-          className="font-display text-lg text-foreground sm:text-xl"
+          className="font-display shrink-0 whitespace-nowrap text-lg text-foreground sm:text-xl"
           onClick={() => setOpen(false)}
         >
           {profile.name}
         </Link>
 
-        <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Main" className="hidden items-center gap-4 lg:flex xl:gap-6">
           {nav.map((n) => (
             <Link
               key={n.label}
               to={n.to}
               {...("hash" in n ? { hash: n.hash } : {})}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="nav-link link-underline text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               activeProps={{ className: "text-foreground" }}
             >
               {n.label}
             </Link>
           ))}
-          <Link to="/cv" className="btn btn-primary !px-4 !py-2.5 !text-xs">
+          <a
+            href={`tel:${profile.phone.replace(/[^\d+]/g, "")}`}
+            data-magnetic
+            className="btn btn-call !px-4 !py-2.5 !text-xs"
+          >
+            <Phone size={14} aria-hidden="true" />
+            Call me
+          </a>
+          <Link to="/cv" data-magnetic className="btn btn-primary !px-4 !py-2.5 !text-xs">
             My CV
           </Link>
         </nav>
 
-        <div className="ml-auto flex items-center gap-2 md:hidden">
+        <div className="ml-auto flex items-center gap-2 lg:hidden">
+          <a
+            href={`tel:${profile.phone.replace(/[^\d+]/g, "")}`}
+            aria-label={`Call ${profile.name} at ${profile.phone}`}
+            data-magnetic
+            className="btn btn-call header-call-icon"
+          >
+            <Phone size={17} aria-hidden="true" />
+          </a>
           <Link
             to="/cv"
+            data-magnetic
             className="btn btn-primary !px-3 !py-1.5 !text-[10px]"
             onClick={() => setOpen(false)}
           >
@@ -79,8 +96,10 @@ export function SiteHeader() {
       </div>
 
       <div
-        className={`md:hidden ${
-          open ? "pointer-events-auto opacity-100 translate-y-0" : "pointer-events-none opacity-0 -translate-y-2"
+        className={`lg:hidden ${
+          open
+            ? "pointer-events-auto opacity-100 translate-y-0"
+            : "pointer-events-none opacity-0 -translate-y-2"
         } absolute inset-x-0 top-full z-40 px-3 pb-3 pt-2 transition-all duration-200`}
         aria-hidden={!open}
       >

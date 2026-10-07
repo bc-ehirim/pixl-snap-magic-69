@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { socials } from "@/data/portfolio";
+import { profile, socials } from "@/data/portfolio";
 
 type Errors = Partial<Record<"name" | "email" | "message", string>>;
 
@@ -102,6 +102,11 @@ export function ContactForm() {
 
 export function ContactLinks() {
   const links = [
+    {
+      label: "Call",
+      href: `tel:${profile.phone.replace(/[^\d+]/g, "")}`,
+      value: profile.phone,
+    },
     { label: "Email", href: `mailto:${socials.email}`, value: socials.email },
     { label: "LinkedIn", href: socials.linkedin, value: "Find me on LinkedIn" },
     { label: "X", href: socials.x, value: "@DecencyBenjamin" },

@@ -14,6 +14,7 @@ export function WorkGrid() {
             key={c}
             role="tab"
             aria-selected={cat === c}
+            data-magnetic
             onClick={() => setCat(c)}
             className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
               cat === c
@@ -26,9 +27,13 @@ export function WorkGrid() {
         ))}
       </div>
 
-      <div className="mt-8 grid gap-x-6 gap-y-8 md:grid-cols-2">
-        {list.map((p) => <ProjectCard key={p.slug} project={p} />)}
-        {list.length === 0 && <p className="text-muted-foreground">Nothing here just yet. Try another category.</p>}
+      <div className="mt-8 grid gap-x-6 gap-y-12 md:grid-cols-2">
+        {list.map((p) => (
+          <ProjectCard key={p.slug} project={p} />
+        ))}
+        {list.length === 0 && (
+          <p className="text-muted-foreground">Nothing here just yet. Try another category.</p>
+        )}
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ import { createPortal } from "react-dom";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SiteMotion } from "@/components/SiteMotion";
 
 function NotFoundComponent() {
   return (
@@ -95,6 +96,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {createPortal(<HeadContent />, document.head)}
+      <SiteMotion />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <a
         href="#main"
