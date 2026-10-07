@@ -88,7 +88,7 @@ function HomePage() {
         <div className="work-poster" data-motion-reveal>
           <span className="work-poster-orbit work-poster-orbit-one" data-parallax />
           <span className="work-poster-orbit work-poster-orbit-two" data-parallax />
-          <p className="eyebrow work-poster-label">Selected work · 2024 — 2026</p>
+          <p className="eyebrow work-poster-label">2025-2026</p>
           <h2
             className="font-display work-poster-title"
             data-motion-title
